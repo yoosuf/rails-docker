@@ -1,4 +1,4 @@
-FROM ruby:2.4.0
+FROM ruby:2.4.1
 
 RUN apt-get update -qq && apt-get install -y build-essential
 
@@ -14,7 +14,7 @@ RUN apt-get install -y libqt4-webkit libqt4-dev xvfb
 # for a JS runtime
 RUN apt-get install -y nodejs
 
-ENV APP_HOME /myapp
+ENV APP_HOME /rails-docker
 RUN mkdir $APP_HOME
 WORKDIR $APP_HOME
 
